@@ -13,149 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#0f2b57;
-    --navy-deep:#0a1f42;
-    --blue:#1f56a5;
-    --blue-light:#3d7ad1;
-    --cream:#f6f4ef;
-    --cream-2:#efece5;
-    --ink:#1c2433;
-    --muted:#55607a;
-    --line:#d9d4ca;
-    --max:1080px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;background:var(--cream);color:var(--ink);
-    font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-  a{color:var(--blue)}
-
-  /* ---------- header ---------- */
-  header{
-    position:sticky;top:0;z-index:50;background:rgba(246,244,239,.94);
-    backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line);
-  }
-  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
-  .brand svg{width:26px;height:26px;flex:none}
-  .brand b{font-weight:800;letter-spacing:.06em;font-size:13px;line-height:1.25;text-transform:uppercase}
-  nav a{
-    text-decoration:none;color:var(--navy);font-weight:600;font-size:13px;
-    letter-spacing:.08em;text-transform:uppercase;margin-left:26px;white-space:nowrap;
-  }
-  nav a:hover{color:var(--blue-light)}
-  @media(max-width:720px){
-    .bar{flex-direction:column;align-items:flex-start;gap:10px}
-    nav{display:flex;flex-wrap:wrap;gap:0 4px}
-    nav a{margin:0 18px 0 0;font-size:12px}
-  }
-
-  /* ---------- hero ---------- */
-  .hero{padding:76px 0 56px;text-align:center;position:relative;overflow:hidden}
-  .hero .star{
-    position:absolute;right:-40px;top:20px;width:220px;opacity:.07;color:var(--navy);
-    pointer-events:none;
-  }
-  .kicker{
-    font-weight:700;letter-spacing:.34em;text-transform:uppercase;
-    color:var(--blue);font-size:clamp(14px,2.4vw,20px);margin:0 0 4px;
-  }
-  h1{
-    font-weight:800;color:var(--navy-deep);margin:0;
-    font-size:clamp(38px,8.5vw,84px);line-height:.98;letter-spacing:-.02em;
-  }
-  h1 .thin{
-    display:block;font-weight:600;color:var(--blue);
-    font-size:clamp(19px,4.2vw,42px);letter-spacing:.2em;margin-top:10px;
-  }
-  .tagline{
-    font-family:Lora,Georgia,serif;font-size:clamp(19px,3vw,27px);color:var(--navy);
-    margin:26px auto 0;display:flex;align-items:center;justify-content:center;gap:18px;max-width:620px;
-  }
-  .tagline::before,.tagline::after{content:"";height:1px;background:var(--navy);flex:1;opacity:.45}
-  .lede{max-width:640px;margin:26px auto 0;color:var(--muted);font-size:18px}
-  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
-  .btn{
-    display:inline-block;text-decoration:none;font-weight:700;font-size:14px;
-    letter-spacing:.08em;text-transform:uppercase;padding:15px 28px;border-radius:2px;
-    transition:transform .12s ease, background .12s ease;
-  }
-  .btn:hover{transform:translateY(-1px)}
-  .btn-primary{background:var(--navy);color:#fff}
-  .btn-primary:hover{background:var(--blue)}
-  .btn-ghost{border:1.5px solid var(--navy);color:var(--navy)}
-  .btn-ghost:hover{background:var(--navy);color:#fff}
-
-  /* ---------- sections ---------- */
-  section{padding:64px 0;border-top:1px solid var(--line)}
-  section:first-of-type{border-top:0}
-  h2{
-    font-size:13px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--blue);margin:0 0 8px;
-  }
-  .h2sub{
-    font-family:Lora,Georgia,serif;font-size:clamp(27px,4.6vw,40px);color:var(--navy-deep);
-    margin:0 0 32px;line-height:1.2;font-weight:500;
-  }
-
-  /* ---------- event card ---------- */
-  .event{
-    background:#fff;border:1px solid var(--line);border-left:5px solid var(--navy);
-    padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:28px;
-  }
-  .event + .event{margin-top:18px}
-  @media(max-width:720px){.event{grid-template-columns:1fr;padding:26px}}
-  .event .when{border-right:1px solid var(--line);padding-right:28px}
-  @media(max-width:720px){.event .when{border-right:0;border-bottom:1px solid var(--line);padding:0 0 22px}}
-  .day{font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-size:13px}
-  .date{font-weight:800;color:var(--navy-deep);font-size:clamp(24px,4vw,32px);line-height:1.15;margin:2px 0 10px}
-  .time{font-size:22px;font-weight:600;color:var(--ink)}
-  .label{font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-size:13px;margin-bottom:4px}
-  .addr{color:var(--muted);line-height:1.55}
-  .addr strong{color:var(--ink);font-weight:600}
-  .banner{
-    background:var(--navy-deep);color:#fff;text-align:center;font-weight:700;
-    letter-spacing:.08em;text-transform:uppercase;font-size:14px;padding:15px 20px;margin-top:18px;
-  }
-  .maplink{display:inline-block;margin-top:10px;font-size:14px;font-weight:600}
-
-  /* ---------- faq ---------- */
-  details{border-bottom:1px solid var(--line);padding:18px 0}
-  details:first-of-type{border-top:1px solid var(--line)}
-  summary{
-    cursor:pointer;list-style:none;font-weight:600;color:var(--navy-deep);font-size:18px;
-    display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
-  }
-  summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";color:var(--blue);font-weight:700;font-size:24px;line-height:1;flex:none}
-  details[open] summary::after{content:"\2013"}
-  details p{color:var(--muted);margin:12px 0 0;max-width:70ch}
-
-  /* ---------- contact ---------- */
-  .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:start}
-  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:28px}}
-  .card{background:#fff;border:1px solid var(--line);padding:28px}
-  .card h3{margin:0 0 4px;font-size:21px;color:var(--navy-deep)}
-  .card .role{color:var(--muted);font-size:15px;margin:0 0 16px}
-  .card a{display:block;font-weight:600;margin-bottom:6px;word-break:break-word}
-  .formbox{background:#fff;border:1px solid var(--line);padding:8px}
-  .formbox iframe{width:100%;border:0;display:block;min-height:760px}
-  .formfallback{padding:28px;color:var(--muted)}
-
-  /* ---------- footer ---------- */
-  footer{background:var(--navy-deep);color:#c9d5e8;padding:40px 0;text-align:center;font-size:14px}
-  footer a{color:#fff;text-decoration:none;font-weight:600}
-  footer .fbrand{
-    color:#fff;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
-    font-size:13px;margin-bottom:10px;
-  }
-</style>
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
@@ -296,7 +154,8 @@
       </div>
       <p style="color:var(--muted);font-size:15px;margin-top:18px">Use the form to join the email list, ask a question, or offer to host. You can also reach out to either organizer directly.</p>
     </div>
-    <div class="formbox">
+    <div>
+      <div class="formbox">
       <!-- ============================================================
            GOOGLE FORM GOES HERE
            Paste the <iframe> from the Google Form "Embed" button,
@@ -306,6 +165,8 @@
         <strong>The form is being set up.</strong><br>
         In the meantime, email <a href="mailto:david@schenklawfirm.com">david@schenklawfirm.com</a> and you will be added to the list.
       </div>
+      </div>
+      <p style="color:var(--muted);font-size:14px;margin-top:12px">We use what you send us to reply to you and to let you know about upcoming events. We do not sell or share your information without your permission. See our <a href="/privacy.html">Privacy Policy</a>.</p>
     </div>
   </div>
 </section>
@@ -320,8 +181,33 @@
       <a href="mailto:david@schenklawfirm.com">David Lizerbram</a> &nbsp;&middot;&nbsp;
       <a href="mailto:dan@diamondlawcorp.com">Daniel Diamond</a>
     </div>
+    <div class="legal-links">
+      <a href="/terms.html">Terms of Use</a> &nbsp;&middot;&nbsp;
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
   </div>
 </footer>
+
+<div id="cookie-notice" role="region" aria-label="Cookie notice">
+  <div class="inner">
+    <div>We use a small number of cookies to keep the site working and to see how it is used. We do not sell your information. See our <a href="/privacy.html">Privacy Policy</a>.</div>
+    <button type="button" id="cookie-ok">Got it</button>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('cookie-notice');
+  var ok=document.getElementById('cookie-ok');
+  var KEY='sdjbn-cookie-notice';
+  var seen=false;
+  try{seen=localStorage.getItem(KEY)==='1';}catch(e){}
+  if(!seen){box.classList.add('show');}
+  ok.addEventListener('click',function(){
+    box.classList.remove('show');
+    try{localStorage.setItem(KEY,'1');}catch(e){}
+  });
+})();
+</script>
 
 </body>
 </html>
