@@ -98,20 +98,20 @@
   .btn-primary:hover{background:var(--blue)}
   .btn-ghost{border:1.5px solid var(--navy);color:var(--navy)}
   .btn-ghost:hover{background:var(--navy);color:#fff}
-  .skyline-band{
-    position:relative;height:262px;
-    background:url(/assets/skyline.jpg) no-repeat center bottom;
-    background-size:auto 262px;
+  .skyline-band{background:#1b4382;overflow:hidden}
+  .skyline-band .sky{
+    max-width:1024px;margin:0 auto;height:262px;position:relative;
+    background:url(/assets/skyline.jpg) no-repeat center bottom;background-size:cover;
   }
-  .skyline-band::after{
+  .skyline-band .sky::after{
     content:"";position:absolute;inset:0;pointer-events:none;
     background:
-      linear-gradient(90deg,#1b4382 0%,rgba(27,67,130,.75) 6%,rgba(27,67,130,0) 22%,rgba(27,67,130,0) 78%,rgba(27,67,130,.75) 94%,#1b4382 100%),
+      linear-gradient(90deg,#1b4382 0%,rgba(27,67,130,.7) 5%,rgba(27,67,130,0) 20%,rgba(27,67,130,0) 80%,rgba(27,67,130,.7) 95%,#1b4382 100%),
       linear-gradient(180deg,#1b4382 0%,rgba(27,67,130,.92) 14%,rgba(27,67,130,.55) 34%,rgba(27,67,130,.18) 55%,rgba(27,67,130,0) 72%);
   }
   @media(max-width:1080px){
-    .skyline-band{background-size:cover;height:clamp(130px,19vw,262px)}
-    .skyline-band::after{
+    .skyline-band .sky{height:clamp(130px,19vw,262px)}
+    .skyline-band .sky::after{
       background:linear-gradient(180deg,#1b4382 0%,rgba(27,67,130,.92) 14%,rgba(27,67,130,.5) 36%,rgba(27,67,130,0) 74%);
     }
   }
@@ -235,11 +235,13 @@
     background:var(--navy);color:#c2d0e6;padding:0 0 40px;text-align:center;font-size:14px;
     position:relative;
   }
-  footer .fsky{
-    height:150px;background:url(/assets/skyline.jpg) no-repeat center bottom;
-    background-size:auto 150px;opacity:.20;filter:grayscale(.35);
+  footer .fsky{max-width:1024px;margin:0 auto;height:150px;
+    background:url(/assets/skyline.jpg) no-repeat center bottom;background-size:cover;
+    opacity:.20;filter:grayscale(.35);
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%);
   }
-  @media(max-width:1080px){footer .fsky{background-size:cover;height:clamp(90px,12vw,150px)}}
+  @media(max-width:1080px){footer .fsky{height:clamp(90px,12vw,150px)}}
   footer .fbody{padding-top:30px}
   footer a{color:#fff;text-decoration:none;font-weight:600}
   footer a:hover{color:var(--gold-light)}
