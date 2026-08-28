@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>San Diego Jewish Business Networking</title>
+<meta name="description" content="A welcoming space for Jewish business professionals in San Diego to meet, connect, and build meaningful relationships. Free, casual, no RSVP required.">
+<link rel="canonical" href="https://sdjewishbusiness.com/">
+<meta property="og:title" content="San Diego Jewish Business Networking">
+<meta property="og:description" content="Connect. Collaborate. Grow. A welcoming space for Jewish business professionals in San Diego.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sdjewishbusiness.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2b57;
+    --navy-deep:#0a1f42;
+    --blue:#1f56a5;
+    --blue-light:#3d7ad1;
+    --cream:#f6f4ef;
+    --cream-2:#efece5;
+    --ink:#1c2433;
+    --muted:#55607a;
+    --line:#d9d4ca;
+    --max:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  a{color:var(--blue)}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(246,244,239,.94);
+    backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
+  .brand svg{width:26px;height:26px;flex:none}
+  .brand b{font-weight:800;letter-spacing:.06em;font-size:13px;line-height:1.25;text-transform:uppercase}
+  nav a{
+    text-decoration:none;color:var(--navy);font-weight:600;font-size:13px;
+    letter-spacing:.08em;text-transform:uppercase;margin-left:26px;white-space:nowrap;
+  }
+  nav a:hover{color:var(--blue-light)}
+  @media(max-width:720px){
+    .bar{flex-direction:column;align-items:flex-start;gap:10px}
+    nav{display:flex;flex-wrap:wrap;gap:0 4px}
+    nav a{margin:0 18px 0 0;font-size:12px}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:76px 0 56px;text-align:center;position:relative;overflow:hidden}
+  .hero .star{
+    position:absolute;right:-40px;top:20px;width:220px;opacity:.07;color:var(--navy);
+    pointer-events:none;
+  }
+  .kicker{
+    font-weight:700;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--blue);font-size:clamp(14px,2.4vw,20px);margin:0 0 4px;
+  }
+  h1{
+    font-weight:800;color:var(--navy-deep);margin:0;
+    font-size:clamp(38px,8.5vw,84px);line-height:.98;letter-spacing:-.02em;
+  }
+  h1 .thin{
+    display:block;font-weight:600;color:var(--blue);
+    font-size:clamp(19px,4.2vw,42px);letter-spacing:.2em;margin-top:10px;
+  }
+  .tagline{
+    font-family:Lora,Georgia,serif;font-size:clamp(19px,3vw,27px);color:var(--navy);
+    margin:26px auto 0;display:flex;align-items:center;justify-content:center;gap:18px;max-width:620px;
+  }
+  .tagline::before,.tagline::after{content:"";height:1px;background:var(--navy);flex:1;opacity:.45}
+  .lede{max-width:640px;margin:26px auto 0;color:var(--muted);font-size:18px}
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:700;font-size:14px;
+    letter-spacing:.08em;text-transform:uppercase;padding:15px 28px;border-radius:2px;
+    transition:transform .12s ease, background .12s ease;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--navy);color:#fff}
+  .btn-primary:hover{background:var(--blue)}
+  .btn-ghost{border:1.5px solid var(--navy);color:var(--navy)}
+  .btn-ghost:hover{background:var(--navy);color:#fff}
+
+  /* ---------- sections ---------- */
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:0}
+  h2{
+    font-size:13px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--blue);margin:0 0 8px;
+  }
+  .h2sub{
+    font-family:Lora,Georgia,serif;font-size:clamp(27px,4.6vw,40px);color:var(--navy-deep);
+    margin:0 0 32px;line-height:1.2;font-weight:500;
+  }
+
+  /* ---------- event card ---------- */
+  .event{
+    background:#fff;border:1px solid var(--line);border-left:5px solid var(--navy);
+    padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:28px;
+  }
+  .event + .event{margin-top:18px}
+  @media(max-width:720px){.event{grid-template-columns:1fr;padding:26px}}
+  .event .when{border-right:1px solid var(--line);padding-right:28px}
+  @media(max-width:720px){.event .when{border-right:0;border-bottom:1px solid var(--line);padding:0 0 22px}}
+  .day{font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-size:13px}
+  .date{font-weight:800;color:var(--navy-deep);font-size:clamp(24px,4vw,32px);line-height:1.15;margin:2px 0 10px}
+  .time{font-size:22px;font-weight:600;color:var(--ink)}
+  .label{font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-size:13px;margin-bottom:4px}
+  .addr{color:var(--muted);line-height:1.55}
+  .addr strong{color:var(--ink);font-weight:600}
+  .banner{
+    background:var(--navy-deep);color:#fff;text-align:center;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;font-size:14px;padding:15px 20px;margin-top:18px;
+  }
+  .maplink{display:inline-block;margin-top:10px;font-size:14px;font-weight:600}
+
+  /* ---------- faq ---------- */
+  details{border-bottom:1px solid var(--line);padding:18px 0}
+  details:first-of-type{border-top:1px solid var(--line)}
+  summary{
+    cursor:pointer;list-style:none;font-weight:600;color:var(--navy-deep);font-size:18px;
+    display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--blue);font-weight:700;font-size:24px;line-height:1;flex:none}
+  details[open] summary::after{content:"\2013"}
+  details p{color:var(--muted);margin:12px 0 0;max-width:70ch}
+
+  /* ---------- contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:start}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:28px}}
+  .card{background:#fff;border:1px solid var(--line);padding:28px}
+  .card h3{margin:0 0 4px;font-size:21px;color:var(--navy-deep)}
+  .card .role{color:var(--muted);font-size:15px;margin:0 0 16px}
+  .card a{display:block;font-weight:600;margin-bottom:6px;word-break:break-word}
+  .formbox{background:#fff;border:1px solid var(--line);padding:8px}
+  .formbox iframe{width:100%;border:0;display:block;min-height:760px}
+  .formfallback{padding:28px;color:var(--muted)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--navy-deep);color:#c9d5e8;padding:40px 0;text-align:center;font-size:14px}
+  footer a{color:#fff;text-decoration:none;font-weight:600}
+  footer .fbrand{
+    color:#fff;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+    font-size:13px;margin-bottom:10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="6">
+        <path d="M50 8 L85 69 L15 69 Z"/><path d="M50 92 L15 31 L85 31 Z"/>
+      </svg>
+      <b>San&nbsp;Diego Jewish&nbsp;Business&nbsp;Networking</b>
+    </a>
+    <nav>
+      <a href="#events">Events</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<div class="hero">
+  <svg class="star" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="5">
+    <path d="M50 8 L85 69 L15 69 Z"/><path d="M50 92 L15 31 L85 31 Z"/>
+  </svg>
+  <div class="wrap">
+    <p class="kicker">San Diego</p>
+    <h1>Jewish Business<span class="thin">Networking</span></h1>
+    <p class="tagline">Connect. Collaborate. Grow.</p>
+    <p class="lede">A welcoming space for Jewish business professionals to meet, connect, and build meaningful relationships. Free to attend. No RSVP required.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#events">See the next event</a>
+      <a class="btn btn-ghost" href="#contact">Join the list</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<!-- ============================================================
+     UPCOMING EVENTS
+     To add or change an event, copy one <div class="event"> block
+     and edit the text inside it. Delete a block when it is past.
+     ============================================================ -->
+<section id="events">
+  <h2>Upcoming</h2>
+  <p class="h2sub">Join us for our next event</p>
+
+  <div class="event">
+    <div class="when">
+      <div class="day">Thursday</div>
+      <div class="date">September 24, 2026</div>
+      <div class="time">6:00 PM</div>
+    </div>
+    <div class="where">
+      <div class="label">Location</div>
+      <div class="addr">
+        <strong>The Butcher Shop Steakhouse</strong><br>
+        Private Room<br>
+        5255 Kearny Villa Rd<br>
+        San Diego, CA 92123
+      </div>
+      <a class="maplink" href="https://maps.google.com/?q=5255+Kearny+Villa+Rd,+San+Diego,+CA+92123" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+
+  <div class="banner">No RSVP required &ndash; just come and connect!</div>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p class="h2sub">An open room, once in a while, for people who build things</p>
+  <p style="max-width:70ch;color:var(--muted)">San Diego Jewish Business Networking is an informal gathering of Jewish business owners, professionals, and entrepreneurs from across the county. There is no membership, no dues, and no pitch from the front of the room. People show up, order a drink, and talk. Some come to find a vendor or a client. Some come to compare notes with someone in the same seat. Most come back.</p>
+  <p style="max-width:70ch;color:var(--muted)">Everyone is welcome, at every stage, from every industry and every level of observance.</p>
+</section>
+
+<section id="faq">
+  <h2>Questions</h2>
+  <p class="h2sub">Frequently asked</p>
+
+  <details>
+    <summary>Who can attend?</summary>
+    <p>Any Jewish business owner, professional, or entrepreneur in the San Diego area. Every industry, every stage, from someone with an idea to someone running a company of two hundred people.</p>
+  </details>
+
+  <details>
+    <summary>Do I need to RSVP?</summary>
+    <p>No. Just show up. If you would like a reminder before each event, use the form on this page to get on the email list.</p>
+  </details>
+
+  <details>
+    <summary>Is there a cost?</summary>
+    <p>There is no cost to attend and no membership fee. You buy your own food and drinks.</p>
+  </details>
+
+  <details>
+    <summary>How often do you meet?</summary>
+    <p>Every few months, usually on a weekday evening. Upcoming dates are always posted at the top of this page.</p>
+  </details>
+
+  <details>
+    <summary>What actually happens at one of these?</summary>
+    <p>It is a private room, drinks, and conversation. No name tags, no timed rotations, no speaker, no thirty-second introductions around the table. Come when you can, leave when you need to.</p>
+  </details>
+
+  <details>
+    <summary>Is this a religious event?</summary>
+    <p>No. It is a business networking group for Jewish professionals. There is no service, no program, and no expectation about observance.</p>
+  </details>
+
+  <details>
+    <summary>Can I bring a colleague or a friend?</summary>
+    <p>Yes, please do. Word of mouth is how the group has grown.</p>
+  </details>
+
+  <details>
+    <summary>Is the food kosher?</summary>
+    <p>Venues vary and are not generally kosher certified. If you have dietary needs, come for the conversation and eat before or after.</p>
+  </details>
+
+  <details>
+    <summary>I would like to host or sponsor an event.</summary>
+    <p>Great. Send a note through the form on this page and we will talk.</p>
+  </details>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="h2sub">Get on the list, or just say hello</p>
+  <div class="contact-grid">
+    <div>
+      <div class="card">
+        <h3>David Lizerbram</h3>
+        <p class="role">Organizer</p>
+        <a href="mailto:david@schenklawfirm.com">david@schenklawfirm.com</a>
+        <a href="tel:+18582031927">(858) 203-1927</a>
+      </div>
+      <p style="color:var(--muted);font-size:15px;margin-top:18px">Use the form to join the email list, ask a question, or offer to host. Everything comes straight to David.</p>
+    </div>
+    <div class="formbox">
+      <!-- ============================================================
+           GOOGLE FORM GOES HERE
+           Paste the <iframe> from the Google Form "Embed" button,
+           replacing this entire comment and the .formfallback div below.
+           ============================================================ -->
+      <div class="formfallback">
+        <strong>The form is being set up.</strong><br>
+        In the meantime, email <a href="mailto:david@schenklawfirm.com">david@schenklawfirm.com</a> and you will be added to the list.
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">San Diego Jewish Business Networking</div>
+    <div>Connect. Collaborate. Grow.</div>
+    <div style="margin-top:12px">
+      <a href="mailto:david@schenklawfirm.com">david@schenklawfirm.com</a> &nbsp;&middot;&nbsp;
+      <a href="tel:+18582031927">(858) 203-1927</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
