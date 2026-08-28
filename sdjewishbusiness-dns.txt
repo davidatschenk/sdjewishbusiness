@@ -1,0 +1,5 @@
+sdjewishbusiness.com.	1	IN	A	185.199.108.153
+sdjewishbusiness.com.	1	IN	A	185.199.109.153
+sdjewishbusiness.com.	1	IN	A	185.199.110.153
+sdjewishbusiness.com.	1	IN	A	185.199.111.153
+www.sdjewishbusiness.com.	1	IN	CNAME	davidatschenk.github.io.

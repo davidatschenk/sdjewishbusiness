@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | San Diego Jewish Business Networking</title>
+<meta name="description" content="Join the email list for San Diego Jewish Business Networking, ask a question, or offer to host an event.">
+<link rel="canonical" href="https://sdjewishbusiness.com/contact.html">
+<meta property="og:title" content="San Diego Jewish Business Networking">
+<meta property="og:description" content="Connect. Collaborate. Grow. A welcoming space for Jewish business professionals in San Diego.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sdjewishbusiness.com/contact.html">
+<meta property="og:image" content="https://sdjewishbusiness.com/assets/sdjbn-flyer-2026-09-24-preview.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="6"><path d="M50 8 L85 69 L15 69 Z"/><path d="M50 92 L15 31 L85 31 Z"/></svg>
+      <b>San Diego Jewish Business Networking</b>
+    </a>
+    <nav>
+      <a href="/#events">Events</a>
+      <a href="/#about">About</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:56px;padding-bottom:72px">
+  <h2>Contact</h2>
+  <p class="h2sub">Get on the list, or just say hello</p>
+  <div class="organizers">
+    <div class="card">
+      <h3>David Lizerbram</h3>
+      <p class="role">Organizer</p>
+      <a href="mailto:david@schenklawfirm.com">david@schenklawfirm.com</a>
+      <a href="tel:+18582031927">(858) 203-1927</a>
+    </div>
+    <div class="card">
+      <h3>Daniel Diamond</h3>
+      <p class="role">Organizer</p>
+      <a href="mailto:dan@diamondlawcorp.com">dan@diamondlawcorp.com</a>
+      <a href="tel:+18583531643">(858) 353-1643</a>
+    </div>
+  </div>
+  <p class="contact-note">Use the form to join the email list, ask a question, or offer to host. You can also reach out to either organizer directly.</p>
+
+  <div class="formbox">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLScN3s3OpyhSgrwwFnQuwfX8qYJ1UTOTTmILwfMf32BHYEknPw/viewform?embedded=true"
+      title="San Diego Jewish Business Networking contact form"
+      height="900" frameborder="0" marginheight="0" marginwidth="0">Loading&hellip;</iframe>
+  </div>
+  <p class="contact-note small">We use what you send us to reply to you and to let you know about upcoming events. We do not sell or share your information without your permission. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+
+  <a class="back" href="/">&larr; Back to the home page</a>
+</main>
+
+<footer>
+  <img class="fsky" src="/assets/skyline.jpg" alt="" aria-hidden="true" width="1024" height="262">
+  <div class="wrap fbody">
+    <div class="fbrand">San Diego Jewish Business Networking</div>
+    <div class="ftag">Connect. Collaborate. Grow.</div>
+    <div style="margin-top:14px">
+      <a href="mailto:david@schenklawfirm.com">David Lizerbram</a> &nbsp;&middot;&nbsp;
+      <a href="mailto:dan@diamondlawcorp.com">Daniel Diamond</a>
+    </div>
+    <div class="legal-links">
+      <a href="/contact.html">Contact</a> &nbsp;&middot;&nbsp;
+      <a href="/terms.html">Terms of Use</a> &nbsp;&middot;&nbsp;
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-notice" role="region" aria-label="Cookie notice">
+  <div class="inner">
+    <div>We use a small number of cookies to keep the site working and to see how it is used. We do not sell your information. See our <a href="/privacy.html">Privacy Policy</a>.</div>
+    <button type="button" id="cookie-ok">Got it</button>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('cookie-notice');
+  var ok=document.getElementById('cookie-ok');
+  var KEY='sdjbn-cookie-notice';
+  var seen=false;
+  try{seen=localStorage.getItem(KEY)==='1';}catch(e){}
+  if(!seen){box.classList.add('show');}
+  ok.addEventListener('click',function(){
+    box.classList.remove('show');
+    try{localStorage.setItem(KEY,'1');}catch(e){}
+  });
+  var b=document.getElementById('copy-link'), n=document.getElementById('copied');
+  if(b){
+    b.addEventListener('click',function(){
+      var done=function(){n.classList.add('show');setTimeout(function(){n.classList.remove('show');},2000);};
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText('https://sdjewishbusiness.com').then(done,function(){});
+      }else{
+        var t=document.createElement('textarea');t.value='https://sdjewishbusiness.com';
+        document.body.appendChild(t);t.select();try{document.execCommand('copy');done();}catch(e){}
+        document.body.removeChild(t);
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

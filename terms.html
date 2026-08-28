@@ -5,11 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terms of Use | San Diego Jewish Business Networking</title>
 <meta name="description" content="The terms that govern use of the San Diego Jewish Business Networking website.">
-<meta name="robots" content="index,follow">
 <link rel="canonical" href="https://sdjewishbusiness.com/terms.html">
+<meta property="og:title" content="San Diego Jewish Business Networking">
+<meta property="og:description" content="Connect. Collaborate. Grow. A welcoming space for Jewish business professionals in San Diego.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sdjewishbusiness.com/terms.html">
+<meta property="og:image" content="https://sdjewishbusiness.com/assets/sdjbn-flyer-2026-09-24-preview.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -17,20 +21,17 @@
 <header>
   <div class="wrap bar">
     <a class="brand" href="/">
-      <svg viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="6">
-        <path d="M50 8 L85 69 L15 69 Z"/><path d="M50 92 L15 31 L85 31 Z"/>
-      </svg>
+      <svg viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="6"><path d="M50 8 L85 69 L15 69 Z"/><path d="M50 92 L15 31 L85 31 Z"/></svg>
       <b>San Diego Jewish Business Networking</b>
     </a>
     <nav>
       <a href="/#events">Events</a>
       <a href="/#about">About</a>
       <a href="/#faq">FAQ</a>
-      <a href="/#contact">Contact</a>
+      <a href="/contact.html">Contact</a>
     </nav>
   </div>
 </header>
-
 <main class="wrap legal">
 
 <h1>Terms of Use</h1>
@@ -87,18 +88,20 @@
 <p>David Lizerbram &nbsp;&middot;&nbsp; <a href="mailto:david@schenklawfirm.com">david@schenklawfirm.com</a> &nbsp;&middot;&nbsp; (858) 203-1927<br>
 Daniel Diamond &nbsp;&middot;&nbsp; <a href="mailto:dan@diamondlawcorp.com">dan@diamondlawcorp.com</a> &nbsp;&middot;&nbsp; (858) 353-1643</p>
 
-  <a class="back" href="/">&larr; Back to the home page</a>
+    <a class="back" href="/">&larr; Back to the home page</a>
 </main>
 
 <footer>
-  <div class="wrap">
+  <img class="fsky" src="/assets/skyline.jpg" alt="" aria-hidden="true" width="1024" height="262">
+  <div class="wrap fbody">
     <div class="fbrand">San Diego Jewish Business Networking</div>
-    <div>Connect. Collaborate. Grow.</div>
-    <div style="margin-top:12px">
+    <div class="ftag">Connect. Collaborate. Grow.</div>
+    <div style="margin-top:14px">
       <a href="mailto:david@schenklawfirm.com">David Lizerbram</a> &nbsp;&middot;&nbsp;
       <a href="mailto:dan@diamondlawcorp.com">Daniel Diamond</a>
     </div>
     <div class="legal-links">
+      <a href="/contact.html">Contact</a> &nbsp;&middot;&nbsp;
       <a href="/terms.html">Terms of Use</a> &nbsp;&middot;&nbsp;
       <a href="/privacy.html">Privacy Policy</a>
     </div>
@@ -123,8 +126,20 @@ Daniel Diamond &nbsp;&middot;&nbsp; <a href="mailto:dan@diamondlawcorp.com">dan@
     box.classList.remove('show');
     try{localStorage.setItem(KEY,'1');}catch(e){}
   });
+  var b=document.getElementById('copy-link'), n=document.getElementById('copied');
+  if(b){
+    b.addEventListener('click',function(){
+      var done=function(){n.classList.add('show');setTimeout(function(){n.classList.remove('show');},2000);};
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText('https://sdjewishbusiness.com').then(done,function(){});
+      }else{
+        var t=document.createElement('textarea');t.value='https://sdjewishbusiness.com';
+        document.body.appendChild(t);t.select();try{document.execCommand('copy');done();}catch(e){}
+        document.body.removeChild(t);
+      }
+    });
+  }
 })();
 </script>
-
 </body>
 </html>
