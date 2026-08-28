@@ -122,14 +122,14 @@
   details p{color:var(--muted);margin:12px 0 0;max-width:70ch}
 
   /* ---------- contact ---------- */
-  .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:start}
+  .contact-grid{display:grid;grid-template-columns:300px 1fr;gap:40px;align-items:start}
   @media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:28px}}
   .card{background:#fff;border:1px solid var(--line);padding:28px}
   .card h3{margin:0 0 4px;font-size:21px;color:var(--navy-deep)}
   .card .role{color:var(--muted);font-size:15px;margin:0 0 16px}
   .card a{display:block;font-weight:600;margin-bottom:6px;word-break:break-word}
-  .formbox{background:#fff;border:1px solid var(--line);padding:8px}
-  .formbox iframe{width:100%;border:0;display:block;min-height:866px}
+  .formbox{background:#fff;border:1px solid var(--line);padding:8px;max-width:664px}
+  .formbox iframe{width:100%;max-width:648px;height:866px;border:0;display:block;margin:0 auto}
   .formfallback{padding:28px;color:var(--muted)}
 
   /* ---------- footer ---------- */
@@ -172,27 +172,29 @@
   footer .legal-links a{font-weight:400;text-decoration:underline;opacity:.85}
 
 
-  /* ---------- flyer share ---------- */
-  .flyer{
-    margin-top:18px;background:#fff;border:1px solid var(--line);padding:28px;
-    display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:start;
+  /* ---------- events layout + flyer sidebar ---------- */
+  .events-grid{display:grid;grid-template-columns:1fr 300px;gap:34px;align-items:start}
+  @media(max-width:900px){.events-grid{grid-template-columns:1fr;gap:26px}}
+  .flyer-side{
+    background:#fff;border:1px solid var(--line);padding:22px;
+    position:sticky;top:96px;
   }
-  @media(max-width:720px){.flyer{grid-template-columns:1fr;gap:22px;padding:24px}}
-  .flyer img{
+  @media(max-width:900px){.flyer-side{position:static}}
+  .flyer-side img{
     width:100%;height:auto;display:block;border:1px solid var(--line);
-    box-shadow:0 2px 14px rgba(15,43,87,.12);
+    box-shadow:0 2px 14px rgba(15,43,87,.12);margin-bottom:18px;
   }
-  .flyer h3{margin:0 0 8px;font-size:21px;color:var(--navy-deep)}
-  .flyer p{color:var(--muted);margin:0 0 18px;font-size:16px;max-width:56ch}
-  .flyer .btn{padding:13px 24px}
-  .share{margin-top:22px;border-top:1px solid var(--line);padding-top:18px}
+  .flyer-side h3{margin:0 0 6px;font-size:19px;color:var(--navy-deep)}
+  .flyer-side p{color:var(--muted);margin:0 0 16px;font-size:15px;line-height:1.55}
+  .flyer-side .btn{display:block;text-align:center;padding:13px 16px;font-size:13px}
+  .share{margin-top:20px;border-top:1px solid var(--line);padding-top:16px}
   .share .label{margin-bottom:10px}
-  .share-row{display:flex;flex-wrap:wrap;gap:8px}
+  .share-row{display:flex;flex-wrap:wrap;gap:7px}
   .share-row a,.share-row button{
-    font-family:inherit;font-size:13px;font-weight:600;letter-spacing:.04em;
+    font-family:inherit;font-size:12.5px;font-weight:600;letter-spacing:.03em;
     text-decoration:none;color:var(--navy);background:var(--cream-2);
-    border:1px solid var(--line);border-radius:2px;padding:10px 16px;cursor:pointer;
+    border:1px solid var(--line);border-radius:2px;padding:9px 13px;cursor:pointer;
   }
   .share-row a:hover,.share-row button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
-  .copied{color:var(--blue);font-size:13px;font-weight:600;margin-left:4px;display:none}
+  .copied{color:var(--blue);font-size:12.5px;font-weight:600;align-self:center;display:none}
   .copied.show{display:inline}
