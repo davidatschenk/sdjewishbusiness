@@ -100,7 +100,7 @@
   .btn-ghost:hover{background:var(--navy);color:#fff}
   .skyline-band{background:#1b4382;overflow:hidden}
   .skyline-band .sky{
-    max-width:1024px;margin:0 auto;height:262px;position:relative;
+    max-width:1024px;margin:0 auto;aspect-ratio:1024/262;position:relative;
     background:url(/assets/skyline.jpg) no-repeat center bottom;background-size:cover;
   }
   .skyline-band .sky::after{
@@ -110,7 +110,6 @@
       linear-gradient(180deg,#1b4382 0%,rgba(27,67,130,.92) 14%,rgba(27,67,130,.55) 34%,rgba(27,67,130,.18) 55%,rgba(27,67,130,0) 72%);
   }
   @media(max-width:1080px){
-    .skyline-band .sky{height:clamp(130px,19vw,262px)}
     .skyline-band .sky::after{
       background:linear-gradient(180deg,#1b4382 0%,rgba(27,67,130,.92) 14%,rgba(27,67,130,.5) 36%,rgba(27,67,130,0) 74%);
     }
@@ -235,13 +234,13 @@
     background:var(--navy);color:#c2d0e6;padding:0 0 40px;text-align:center;font-size:14px;
     position:relative;
   }
-  footer .fsky{max-width:1024px;margin:0 auto;height:150px;
+  footer .fsky{max-width:1024px;margin:0 auto;aspect-ratio:1024/150;
     background:url(/assets/skyline.jpg) no-repeat center bottom;background-size:cover;
     opacity:.20;filter:grayscale(.35);
     -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%);
     mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%);
   }
-  @media(max-width:1080px){footer .fsky{height:clamp(90px,12vw,150px)}}
+
   footer .fbody{padding-top:30px}
   footer a{color:#fff;text-decoration:none;font-weight:600}
   footer a:hover{color:var(--gold-light)}
