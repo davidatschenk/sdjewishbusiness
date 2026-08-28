@@ -98,13 +98,10 @@
   .btn-primary:hover{background:var(--blue)}
   .btn-ghost{border:1.5px solid var(--navy);color:var(--navy)}
   .btn-ghost:hover{background:var(--navy);color:#fff}
-  .skyline{
-    display:block;width:100%;height:auto;position:relative;z-index:1;
-    margin-bottom:-1px;
-  }
+  .skyline{display:block;width:100%;height:auto;margin-bottom:-1px}
   .skyline-wrap{position:relative}
   .skyline-wrap::after{
-    content:"";position:absolute;inset:0;pointer-events:none;
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:3;
     background:linear-gradient(180deg,#1b4382 0%,rgba(27,67,130,.92) 14%,rgba(27,67,130,.55) 34%,rgba(27,67,130,.18) 55%,rgba(27,67,130,0) 72%);
   }
 
