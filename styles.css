@@ -171,3 +171,28 @@
   footer .legal-links{margin-top:14px;font-size:13px}
   footer .legal-links a{font-weight:400;text-decoration:underline;opacity:.85}
 
+
+  /* ---------- flyer share ---------- */
+  .flyer{
+    margin-top:18px;background:#fff;border:1px solid var(--line);padding:28px;
+    display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:start;
+  }
+  @media(max-width:720px){.flyer{grid-template-columns:1fr;gap:22px;padding:24px}}
+  .flyer img{
+    width:100%;height:auto;display:block;border:1px solid var(--line);
+    box-shadow:0 2px 14px rgba(15,43,87,.12);
+  }
+  .flyer h3{margin:0 0 8px;font-size:21px;color:var(--navy-deep)}
+  .flyer p{color:var(--muted);margin:0 0 18px;font-size:16px;max-width:56ch}
+  .flyer .btn{padding:13px 24px}
+  .share{margin-top:22px;border-top:1px solid var(--line);padding-top:18px}
+  .share .label{margin-bottom:10px}
+  .share-row{display:flex;flex-wrap:wrap;gap:8px}
+  .share-row a,.share-row button{
+    font-family:inherit;font-size:13px;font-weight:600;letter-spacing:.04em;
+    text-decoration:none;color:var(--navy);background:var(--cream-2);
+    border:1px solid var(--line);border-radius:2px;padding:10px 16px;cursor:pointer;
+  }
+  .share-row a:hover,.share-row button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .copied{color:var(--blue);font-size:13px;font-weight:600;margin-left:4px;display:none}
+  .copied.show{display:inline}
