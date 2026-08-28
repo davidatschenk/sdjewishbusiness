@@ -98,11 +98,22 @@
   .btn-primary:hover{background:var(--blue)}
   .btn-ghost{border:1.5px solid var(--navy);color:var(--navy)}
   .btn-ghost:hover{background:var(--navy);color:#fff}
-  .skyline{display:block;width:100%;height:auto;margin-bottom:-1px}
-  .skyline-wrap{position:relative}
-  .skyline-wrap::after{
-    content:"";position:absolute;inset:0;pointer-events:none;z-index:3;
-    background:linear-gradient(180deg,#1b4382 0%,rgba(27,67,130,.92) 14%,rgba(27,67,130,.55) 34%,rgba(27,67,130,.18) 55%,rgba(27,67,130,0) 72%);
+  .skyline-band{
+    position:relative;height:262px;
+    background:url(/assets/skyline.jpg) no-repeat center bottom;
+    background-size:auto 262px;
+  }
+  .skyline-band::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      linear-gradient(90deg,#1b4382 0%,rgba(27,67,130,.75) 6%,rgba(27,67,130,0) 22%,rgba(27,67,130,0) 78%,rgba(27,67,130,.75) 94%,#1b4382 100%),
+      linear-gradient(180deg,#1b4382 0%,rgba(27,67,130,.92) 14%,rgba(27,67,130,.55) 34%,rgba(27,67,130,.18) 55%,rgba(27,67,130,0) 72%);
+  }
+  @media(max-width:1080px){
+    .skyline-band{background-size:cover;height:clamp(130px,19vw,262px)}
+    .skyline-band::after{
+      background:linear-gradient(180deg,#1b4382 0%,rgba(27,67,130,.92) 14%,rgba(27,67,130,.5) 36%,rgba(27,67,130,0) 74%);
+    }
   }
 
   /* ---------- sections ---------- */
@@ -224,7 +235,11 @@
     background:var(--navy);color:#c2d0e6;padding:0 0 40px;text-align:center;font-size:14px;
     position:relative;
   }
-  footer .fsky{display:block;width:100%;height:auto;opacity:.22;filter:grayscale(.4)}
+  footer .fsky{
+    height:150px;background:url(/assets/skyline.jpg) no-repeat center bottom;
+    background-size:auto 150px;opacity:.20;filter:grayscale(.35);
+  }
+  @media(max-width:1080px){footer .fsky{background-size:cover;height:clamp(90px,12vw,150px)}}
   footer .fbody{padding-top:30px}
   footer a{color:#fff;text-decoration:none;font-weight:600}
   footer a:hover{color:var(--gold-light)}
